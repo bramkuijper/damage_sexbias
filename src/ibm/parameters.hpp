@@ -9,10 +9,17 @@ enum Sex
 
 class Parameters
 {
-    unsigned n{2,2};
-    unsigned long max_time{100};
+    public:
+        unsigned n[2]{2,2};
+        unsigned long max_time{100};
 
-    double m{0.5,0.5};
+        double m[2]{0.5,0.5};
+
+        double init_t[2]{0.0,0.0};
+
+        // probability that damage arises spontaneously
+        // in the egg stage
+        double d_egg{0.0};
 
 };
 

@@ -1,8 +1,10 @@
+#include "parameters.hpp"
+#include "individual.hpp"
 #include "patch.hpp"
 
-Patch::Patch(Parameters &const par) :
-    females{par.n[female], par.init_tf, par_init_m, false},
-    males{par.n[male], par.init_tf, par_init_m, false}
+Patch::Patch(Parameters const &par) :
+    females(par.n[female], Individual(par.init_t[female], par.init_t[male], false, true)),
+    males(par.n[male], Individual(par.init_t[female], par.init_t[male], false, false))
 {
 }
 
@@ -11,7 +13,7 @@ Patch::Patch(Patch const &other) :
     males{other.males}
 {}
 
-void operator=(Patch const &other)
+void Patch::operator=(Patch const &other)
 {
     females = other.females;
     males = other.males;
