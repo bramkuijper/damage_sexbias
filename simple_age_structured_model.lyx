@@ -1,0 +1,543 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Let elements of the non-square matrix 
+\begin_inset Formula $\mathbf{z}^{\mathrm{f}}=(z_{i,j}^{\mathrm{f}})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{z}^{\mathrm{m}}=(z_{i,j}^{\mathrm{m}})$
+\end_inset
+
+ where 
+\begin_inset Formula $i,j\in(\mathrm{yu},\mathrm{yd},\mathrm{ou},\mathrm{od})$
+\end_inset
+
+ describe the probability that an individual in the next time step obtains damage level 
+\begin_inset Formula $i$
+\end_inset
+
+ while the individual has damage level 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Here,
+ the superscript 
+\begin_inset Formula $\mathrm{f}$
+\end_inset
+
+ denotes that this matrix is used when the individual is in the female role.
+ By contrast,
+ when mating in the male role there is no transmission from one generation to the next:
+\begin_inset Formula 
+\begin{align*}
+\mathbf{z}^{\mathrm{f}} & =\left[\begin{array}{cccc}
+1-d_{e} & \left(1-t_{\mathrm{y}}\right)/f_{\mathrm{yd}} & 1-d_{e} & \left(1-t_{\mathrm{o}}\right)/f_{\mathrm{yd}}\\
+d_{e} & t_{\mathrm{y}}/f_{\mathrm{yd}} & d_{e} & t_{\mathrm{o}}/f_{\mathrm{yd}}\\
+1-d_{y} & t_{y} & 1-d_{\mathrm{o}} & t_{\mathrm{o}}\\
+d_{y} & 1-t_{y} & d_{\mathrm{o}} & 1-t_{\mathrm{o}}
+\end{array}\right],\\
+\mathbf{z}^{\mathrm{m}} & =\left[\begin{array}{cccc}
+1-d_{e} & \left(1-t_{\mathrm{y}}\right)/f_{\mathrm{yd}} & 1-d_{e} & \left(1-t_{\mathrm{o}}\right)/f_{\mathrm{yd}}\\
+d_{e} & t_{\mathrm{y}}/f_{\mathrm{yd}} & d_{e} & t_{\mathrm{o}}/f_{\mathrm{yd}}\\
+1-d_{y} & 0 & 1-d_{\mathrm{o}} & 0\\
+d_{y} & 1 & d_{\mathrm{o}} & 1
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+where element 
+\begin_inset Formula $z_{\mathrm{u,uy}}$
+\end_inset
+
+ reflects the probability that an undamaged offspring gets born from an undamaged parent:
+ the offspring maintains the same undamaged state as its parent with probability 
+\begin_inset Formula $1-d$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $d$
+\end_inset
+
+ is the probability that an individual becomes damaged when it is undamaged.
+ Similarly,
+ 
+\begin_inset Formula $z_{\mathrm{u,dy}}$
+\end_inset
+
+ reflects the probability that a damaged young parent does not transmit damage to her young at probability 
+\begin_inset Formula $1-t_{\mathrm{y}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Fecundity values 
+\begin_inset Formula $f_{ij}$
+\end_inset
+
+ are only additive at the moment where 
+\begin_inset Formula 
+\begin{align*}
+f_{ij} & =1+\phi_{i=\mathrm{o}}-\delta_{j=\mathrm{d}}.
+\end{align*}
+
+\end_inset
+
+Survival values are 
+\begin_inset Formula 
+\begin{align*}
+s_{ij} & =1-\mu_{0}-\kappa_{j=\mathrm{d}}-\gamma_{i=\mathrm{o}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Mutant transition matrix
+\end_layout
+
+\begin_layout Standard
+All actually easier to write this in transition matrix format.
+ Let 
+\begin_inset Formula $B$
+\end_inset
+
+ reflect the mutant transition matrix.
+ Let 
+\begin_inset Formula $b_{\mathrm{y}j,\iota\eta}$
+\end_inset
+
+ be the expected number of successfully established young individuals who carry the mutant allele and are in state 
+\begin_inset Formula $j$
+\end_inset
+
+ born from parents of age 
+\begin_inset Formula $\iota\in(\mathrm{y},\mathrm{o})$
+\end_inset
+
+ and in state 
+\begin_inset Formula $\eta\in(\mathrm{u},\mathrm{d})$
+\end_inset
+
+.
+ We have
+\begin_inset Formula 
+\begin{align*}
+b_{\mathrm{y}j,\iota\eta} & =\frac{1}{2}\left(1-m\right)\frac{\left(1-s_{\mathrm{\iota\eta}}\right)f_{\mathrm{\iota\eta}}z_{\mathrm{\mathrm{y}}j,\mathrm{\iota\eta}}^{\mathrm{f}}\left(\hat{t}_{\mathrm{y}},\hat{t}_{\mathrm{o}}\right)}{f_{\mathrm{\iota\eta}}(1-m)+m\sum_{k\ell}p_{k\ell,t}f_{kl}}\\
+ & +\frac{1}{2}\left(1-m\right)\sum_{ij}p_{ij}\frac{\left(1-s_{ij}\right)f_{ij}z_{\mathrm{\mathrm{y}}j,ij}^{\mathrm{f}}\left(t_{\mathrm{y}},t_{\mathrm{o}}\right)}{f_{ij}(1-m)+m\sum_{k\ell}p_{k\ell,t}f_{kl}}\\
+ & +\frac{1}{2}m\sum_{k,\ell}p_{k\ell,t}\frac{\left(1-s_{kl}\right)f_{\mathrm{\iota\eta}}z_{\mathrm{\mathrm{y}}j,\mathrm{\iota\eta}}^{\mathrm{f}}\left(\hat{t}_{\mathrm{y}},\hat{t}_{\mathrm{o}}\right)}{f_{k\ell}(1-m)+m\sum_{gh}p_{gh,t}f_{gh}}\\
+ & +\frac{1}{2}m\sum_{ij}p_{ij}\sum_{k,\ell}p_{k\ell,t}\frac{\left(1-s_{kl}\right)f_{ij}z_{\mathrm{\mathrm{y}}j,ij}^{\mathrm{f}}\left(t_{\mathrm{y}},t_{\mathrm{o}}\right)}{f_{k\ell}(1-m)+m\sum_{gh}p_{gh,t}f_{gh}}
+\end{align*}
+
+\end_inset
+
+The expected number of old individuals with damage level 
+\begin_inset Formula $j$
+\end_inset
+
+ is then given by
+\begin_inset Formula 
+\begin{align*}
+b_{\mathrm{o}j,\iota\eta} & =s_{\iota\eta}z_{\mathrm{o}j,\iota\eta}^{\mathrm{f}}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $z^{\mathrm{m}}$
+\end_inset
+
+ actually does not matter as while it acts in the female role only half of the time,
+ it still produces the same number of offspring as an asexual.
+ Genetic shares do not matter here to transfer damage,
+ it is the actual clearance of damage that mattes.
+\end_layout
+
+\begin_layout Subsection
+Mutant transition matrix when 
+\begin_inset Formula $\mathrm{y}$
+\end_inset
+
+ individuals can stay 
+\begin_inset Formula $\mathrm{y}$
+\end_inset
+
+ for a while
+\end_layout
+
+\begin_layout Standard
+It might be best to have separate damage matrices to newborns and to the same individual.
+ We have
+\begin_inset Formula 
+\begin{align*}
+z^{\mathrm{f}}\left(t_{\mathrm{o}},t_{\mathrm{o}}\right) & =\left[\begin{array}{cccc}
+1-d_{e} & \left(1-t_{\mathrm{y}}\right)/f_{\mathrm{yd}} & 1-d_{e} & \left(1-t_{\mathrm{o}}\right)/f_{\mathrm{yd}}\\
+d_{e} & t_{\mathrm{y}}/f_{\mathrm{yd}} & d_{e} & t_{\mathrm{o}}/f_{\mathrm{yd}}\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]\\
+x\left(t_{\mathrm{o}},t_{\mathrm{o}}\right) & =\left[\begin{array}{cccc}
+(1-a)\left(1-d_{\mathrm{y}}\right) & (1-a)t_{y} & 0 & 0\\
+(1-a)d_{\mathrm{y}} & (1-a)\left(1-t_{y}\right) & 0 & 0\\
+a\left(1-d_{\mathrm{y}}\right) & at_{y} & 1-d_{\mathrm{o}} & t_{\mathrm{o}}\\
+ad_{\mathrm{y}} & a\left(1-t_{y}\right) & d_{\mathrm{o}} & 1-t_{\mathrm{o}}
+\end{array}\right],
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $a$
+\end_inset
+
+ reflects the probability that a young individual joins the older age class,
+ in which it will enjoy lower/higher reproductive success and increased rates of damage accumulation.
+\end_layout
+
+\begin_layout Standard
+We have
+\begin_inset Formula 
+\begin{align*}
+b_{\mathrm{y}j,\iota\eta} & =\delta_{\iota=\mathrm{y}}s_{\iota\eta}x_{\mathrm{y}j,\iota\eta}\left(\hat{t}_{\mathrm{y}},\hat{t}_{\mathrm{o}}\right)\\
+ & +\frac{1}{2}\left(1-m\right)\frac{\left(1-s_{\mathrm{\iota\eta}}\right)f_{\mathrm{\iota\eta}}z_{\mathrm{\mathrm{y}}j,\mathrm{\iota\eta}}^{\mathrm{f}}\left(\hat{t}_{\mathrm{y}},\hat{t}_{\mathrm{o}}\right)}{f_{\mathrm{\iota\eta}}(1-m)+m\sum_{k\ell}p_{k\ell,t}f_{kl}}\\
+ & +\frac{1}{2}\left(1-m\right)\sum_{ij}p_{ij}\frac{\left(1-s_{ij}\right)f_{ij}z_{\mathrm{\mathrm{y}}j,ij}^{\mathrm{f}}\left(t_{\mathrm{y}},t_{\mathrm{o}}\right)}{f_{ij}(1-m)+m\sum_{k\ell}p_{k\ell,t}f_{kl}}\\
+ & +\frac{1}{2}m\sum_{k,\ell}p_{k\ell,t}\frac{\left(1-s_{kl}\right)f_{\mathrm{\iota\eta}}z_{\mathrm{\mathrm{y}}j,\mathrm{\iota\eta}}^{\mathrm{f}}\left(\hat{t}_{\mathrm{y}},\hat{t}_{\mathrm{o}}\right)}{f_{k\ell}(1-m)+m\sum_{gh}p_{gh,t}f_{gh}}\\
+ & +\frac{1}{2}m\sum_{ij}p_{ij}\sum_{k,\ell}p_{k\ell,t}\frac{\left(1-s_{kl}\right)f_{ij}z_{\mathrm{\mathrm{y}}j,ij}^{\mathrm{f}}\left(t_{\mathrm{y}},t_{\mathrm{o}}\right)}{f_{k\ell}(1-m)+m\sum_{gh}p_{gh,t}f_{gh}}\\
+b_{\mathrm{o}j,\iota\eta} & =s_{\iota\eta}x_{\mathrm{o}j,\iota\eta}\left(\hat{t}_{\mathrm{y}},\hat{t}_{\mathrm{o}}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Model with resources
+\end_layout
+
+\begin_layout Section
+Model with transmission to daughters vs sons
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathbf{z}^{\mathrm{f}}$
+\end_inset
+
+ be the transition matrix when the focal mutant is female.
+ With states 
+\begin_inset Formula $[(\mathrm{f,u}),(\mathrm{f},\mathrm{d}),(\mathrm{m},\mathrm{u}),(\mathrm{m},\mathrm{d})]$
+\end_inset
+
+,
+ we have
+\begin_inset Formula 
+\begin{align*}
+ & \phantom{=(\mathrm{\mathrm{u},\mathrm{u}})\ \ \ \ }(\mathrm{f,u)\quad\quad\quad(\mathrm{f,d)}}\\
+\mathbf{z}^{\mathrm{f}}\left(f_{\mathrm{d}}\right) & =\begin{array}{c}
+(\mathrm{f,u})\\
+(\mathrm{f,d})\\
+(\mathrm{m,u})\\
+(\mathrm{m,d})
+\end{array}\left[\begin{array}{cc}
+1-d_{e} & \left(1-t_{\mathrm{f}\rightarrow\mathrm{f}}\right)/f_{\mathrm{d}}\\
+d_{e} & t_{\mathrm{f}\rightarrow\mathrm{f}}/f_{\mathrm{d}}\\
+1-d_{e} & \left(1-t_{\mathrm{f}\rightarrow\mathrm{m}}\right)/f_{\mathrm{d}}\\
+d_{e} & t_{\mathrm{f}\rightarrow\mathrm{m}}/f_{\mathrm{d}}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $B$
+\end_inset
+
+ reflect the mutant transition matrix.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $b_{xj,xi}$
+\end_inset
+
+ be the expected number of successfully established individuals of sex 
+\begin_inset Formula $x\in(m,f)$
+\end_inset
+
+ and in damage state 
+\begin_inset Formula $k\in(u,d)$
+\end_inset
+
+ who carry the mutant allele born from a focal mutant of sex 
+\begin_inset Formula $y$
+\end_inset
+
+ and in damage state 
+\begin_inset Formula $i$
+\end_inset
+
+ who lives together with a mate of sex 
+\begin_inset Formula $y$
+\end_inset
+
+ and damage state 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Ugg this is also not going to work as we need to multiply both male and female mortalities.
+ Let's do this
+\begin_inset Formula 
+\begin{align*}
+b_{(\mathrm{f}i\times\mathrm{m}j),(\underline{\mathrm{f}k}\times\mathrm{m}\ell)} & =\Pr\left((\mathrm{f}i\times\mathrm{m}j),(\underline{\mathrm{f}k}\times\mathrm{m}\ell)\mid\text{both die}\right)+\Pr\left(\text{female dies}\right)\\
+ & +\Pr\left(\text{male dies}\right)+\Pr\left(\text{none dies}\right)\\
+\\\Pr\left((\mathrm{f}i\times\mathrm{m}j),(\underline{\mathrm{f}k}\times\mathrm{m}\ell)\mid\text{both die}\right) & =\left(1-s_{\mathrm{f}k}\right)\frac{\left(1-m_{\mathrm{f}}\right)f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{f}i,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & \times\left(1-s_{\mathrm{m}\ell}\right)\frac{\left(1-m_{\mathrm{m}}\right)f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{m}j,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +\left(1-s_{\mathrm{f}k}\right)\frac{\left(1-m_{\mathrm{f}}\right)f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{f}i,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & \times\left(1-s_{\mathrm{m}\ell}\right)\frac{m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}z_{\mathrm{m}j,h}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}h\times\mathrm{m}g}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +\left(1-s_{\mathrm{f}k}\right)\frac{m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}z_{\mathrm{f}i,h}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}h\times\mathrm{m}g}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & \times\left(1-s_{\mathrm{m}\ell}\right)\frac{\left(1-m_{\mathrm{m}}\right)f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{m}j,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +\left(1-s_{\mathrm{f}k}\right)\frac{m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}z_{\mathrm{f}i,h}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}h\times\mathrm{m}g}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & \times\left(1-s_{\mathrm{m}\ell}\right)\frac{m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}z_{\mathrm{m}j,h}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}h\times\mathrm{m}g}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +\sum_{\eta=\{\mathrm{u,d}\}}\sum_{\gamma=\{\mathrm{u,d}\}}p_{\mathrm{f}\eta\times\mathrm{m}\gamma}\left(1-s_{\mathrm{f}\eta}\right)\left(1-s_{\mathrm{m}\gamma}\right)\\
+ & \times\left\{ m_{\mathrm{f}}\frac{f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{f}i,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}\eta\times\mathrm{m}\gamma}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\right.\\
+ & \times m_{\mathrm{m}}\frac{f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{f}i,j}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}\eta\times\mathrm{m}\gamma}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +m_{\mathrm{f}}\frac{f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{f}i,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}\eta\times\mathrm{m}\gamma}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & \times\left[\frac{\left(1-m_{\mathrm{m}}\right)f_{\mathrm{f}\eta\times\mathrm{m}\gamma}z_{\mathrm{f}i,\eta}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}\eta\times\mathrm{m}\gamma}\right)}{f_{\mathrm{f}\eta\times\mathrm{m}\gamma}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\right.\\
+ & +\left.\frac{m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}z_{\mathrm{f}i,h}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}h\times\mathrm{m}g}\right)}{f_{\mathrm{f}\eta\times\mathrm{m}\gamma}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\right]\\
+ & +\\
+\\
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+b_{(\mathrm{f}i\times\mathrm{m}j),(\underline{\mathrm{f}k}\times\mathrm{m}\ell)} & =\frac{1}{2}\left(1-m_{\mathrm{f}}\right)\frac{\left(1-s_{\mathrm{f}k}\right)f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{f}i,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\delta_{\ell=j}\\
+ & +\frac{1}{2}\left(1-m_{\mathrm{m}}\right)\frac{\left(1-s_{\mathrm{m}\ell}\right)f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{m}j,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\delta_{i=k}\\
+ & +\frac{1}{2}m_{\mathrm{f}}\sum p_{\mathrm{f}\eta\times\mathrm{m}j}\frac{\left(1-s_{\mathrm{f}\eta}\right)f_{\mathrm{f}\eta\times\mathrm{m}j}z_{\mathrm{f}i,k}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}\eta\times\mathrm{m}j}\right)}{f_{\mathrm{f}\eta\times\mathrm{m}j}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +\frac{1}{2}m_{\mathrm{m}}\sum p_{\mathrm{f}i\times\mathrm{m}\eta}\frac{\left(1-s_{\mathrm{m}\eta}\right)f_{\mathrm{f}i\times\mathrm{m}\eta}z_{\mathrm{f}i,\eta}^{\mathrm{f}}\left(\hat{t}_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}i\times\mathrm{m}\eta}\right)}{f_{\mathrm{f}i\times\mathrm{m}\eta}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +s_{\mathrm{f}k}x_{ik}s_{\mathrm{m}\ell}x_{j\ell}\\
+ & +s_{\mathrm{f}k}x_{ik}\\
+\\b_{(\mathrm{f}i\times\mathrm{m}j),(\mathrm{f}k\times\underline{\mathrm{m}\ell})} & =\frac{1}{2}\left(1-m_{\mathrm{f}}\right)\frac{\left(1-s_{\mathrm{f}k}\right)f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{f}i,k}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\delta_{\ell=j}\\
+ & +\frac{1}{2}\left(1-m_{\mathrm{m}}\right)\frac{\left(1-s_{\mathrm{m}\ell}\right)f_{\mathrm{f}k\times\mathrm{m}\ell}z_{\mathrm{m}j,k}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}k\times\mathrm{m}\ell}\right)}{f_{\mathrm{f}k\times\mathrm{m}\ell}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\delta_{i=k}\\
+ & +\frac{1}{2}m_{\mathrm{f}}\sum p_{\mathrm{f}\eta\times\mathrm{m}j}\frac{\left(1-s_{\mathrm{f}\eta}\right)f_{\mathrm{f}\eta\times\mathrm{m}j}z_{\mathrm{f}i,k}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{f}};f_{\mathrm{f}\eta\times\mathrm{m}j}\right)}{f_{\mathrm{f}\eta\times\mathrm{m}j}\left(1-m_{\mathrm{f}}\right)+m_{\mathrm{f}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +\frac{1}{2}m_{\mathrm{m}}\sum p_{\mathrm{f}i\times\mathrm{m}\eta}\frac{\left(1-s_{\mathrm{m}\eta}\right)f_{\mathrm{f}i\times\mathrm{m}\eta}z_{\mathrm{f}i,\eta}^{\mathrm{f}}\left(t_{\mathrm{f}\rightarrow\mathrm{m}};f_{\mathrm{f}i\times\mathrm{m}\eta}\right)}{f_{\mathrm{f}i\times\mathrm{m}\eta}\left(1-m_{\mathrm{m}}\right)+m_{\mathrm{m}}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}.\\
+\\\\\\
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+b_{xj,yi} & =\frac{1}{2}\left(1-m_{x}\right)\delta_{y=\mathrm{f}}\sum_{k=\{\mathrm{u},\mathrm{d}\}}p_{\mathrm{f}i,\mathrm{m}k}\frac{f_{\mathrm{f}i\times\mathrm{m}k}M_{x}(\mathrm{f}i,\mathrm{m}k)z_{xj,i}^{\mathrm{f}}\left(\hat{t}_{\mathrm{y}},\hat{t}_{\mathrm{o}};f_{\mathrm{f}i\times\mathrm{m}k}\right)}{f_{\mathrm{f}i\times\mathrm{m}k}\left(1-m_{x}\right)+m_{x}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +\frac{1}{2}\left(1-m_{x}\right)\delta_{y=m}\sum_{k=\{\mathrm{u},\mathrm{d}\}}p_{\mathrm{f}k,\mathrm{m}i}\frac{f_{\mathrm{f}k\times\mathrm{m}i}M_{x}(\mathrm{f}k,\mathrm{m}i)z_{xj,k}^{\mathrm{f}}\left(t_{\mathrm{f}},t_{\mathrm{m}};f_{\mathrm{f}k\times\mathrm{m}i}\right)}{f_{\mathrm{f}k\times\mathrm{m}i}\left(1-m_{x}\right)+m_{x}\sum_{h,g}p_{\mathrm{f}h,\mathrm{m}g}f_{\mathrm{f}h\times\mathrm{m}g}}\\
+ & +\frac{1}{2}m_{x}\sum_{k,\ell}p_{k\ell,t}\frac{\left(1-s_{kl}\right)f_{\mathrm{\iota\eta}}z_{\mathrm{\mathrm{y}}j,\mathrm{\iota\eta}}^{\mathrm{f}}\left(\hat{t}_{\mathrm{y}},\hat{t}_{\mathrm{o}}\right)}{f_{k\ell}(1-m)+m\sum_{gh}p_{gh,t}f_{gh}}\\
+ & +\frac{1}{2}m\sum_{ij}p_{ij}\sum_{k,\ell}p_{k\ell,t}\frac{\left(1-s_{kl}\right)f_{ij}z_{\mathrm{\mathrm{y}}j,ij}^{\mathrm{f}}\left(t_{\mathrm{y}},t_{\mathrm{o}}\right)}{f_{k\ell}(1-m)+m\sum_{gh}p_{gh,t}f_{gh}},
+\end{align*}
+
+\end_inset
+
+where the function 
+\begin_inset Formula $M_{x}\left(\mathrm{f}i,\mathrm{m}k\right)$
+\end_inset
+
+ reflects the mortality rate of a sex 
+\begin_inset Formula $x$
+\end_inset
+
+ parent,
+ given that the female parent is in state 
+\begin_inset Formula $i$
+\end_inset
+
+ and the male parent is in state 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula 
+\begin{align*}
+M_{x}\left(\mathrm{f}i,\mathrm{m}k\right) & =\delta_{x=\mathrm{f}}\left(1-s_{\mathrm{f}i}\right)+\delta_{x=\mathrm{m}}\left(1-s_{\mathrm{m}k}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mutant transition matrix for 
+\begin_inset Formula $n$
+\end_inset
+
+ life stages
+\end_layout
+
+\begin_layout Standard
+So far we considered only two life stages.
+ Considering 
+\begin_inset Formula $n$
+\end_inset
+
+ stages might be more relevant here,
+ but also an absolute computational nightmare.
+ In essence the only thing that changes with 
+\begin_inset Formula $n$
+\end_inset
+
+ age classes (with age 
+\begin_inset Formula $i\in1,2,\ldots,n$
+\end_inset
+
+) is that the structure changes of the damage allocation matrix 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ This now has dimensions 
+\begin_inset Formula $2n\times2n$
+\end_inset
+
+,
+ with the consecutive rows/columns reflecting the classes 
+\begin_inset Formula $(ij)=(1\mathrm{u},1\mathrm{d},2\mathrm{u},2\mathrm{d},\ldots,n\mathrm{u},n\mathrm{d})$
+\end_inset
+
+.
+ We then have
+\begin_inset Formula 
+\begin{align*}
+z & =\left[\begin{array}{ccccccc}
+1-d_{e} & \left(1-t_{1}\right)/f_{1\mathrm{d}} & 1-d_{e} & \left(1-t_{2}\right)/f_{2\mathrm{d}} & \ldots & 1-d_{e} & \left(1-t_{n}\right)/f_{2\mathrm{d}}\\
+d_{e} & t_{1}/f_{\mathrm{1d}} & d_{e} & t_{2}/f_{\mathrm{2d}} & \ldots & d_{e} & t_{n}/f_{\mathrm{2d}}\\
+1-d_{1\rightarrow2} & t_{1} & 0 & 0 & \ldots & 0 & 0\\
+d_{1\rightarrow2} & 1-t_{1} & 0 & 0 & \ldots & 0 & 0\\
+0 & 0 & 1-d_{2\rightarrow3} & t_{2} & \ldots & 0 & 0\\
+0 & 0 & d_{2\rightarrow3} & 1-t_{2} & \ldots & 0 & 0\\
+\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \ldots\\
+0 & 0 & 0 & 0 & \ldots & 1-d_{n\rightarrow n} & t_{n}\\
+0 & 0 & 0 & 0 & \ldots & d_{n\rightarrow n} & 1-t_{n}
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+The survival and fecundity functions now become:
+\end_layout
+
+\end_body
+\end_document
