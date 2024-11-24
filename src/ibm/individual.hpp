@@ -13,6 +13,9 @@ class Individual
 
         bool is_female{true};
 
+        bool is_alive{true};
+
+
         double clutch_size{0.0};
 
         // initialization constructor

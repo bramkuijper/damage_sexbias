@@ -10,12 +10,16 @@ Patch::Patch(Parameters const &par) :
 
 Patch::Patch(Patch const &other) :
     females{other.females},
-    males{other.males}
+    males{other.males},
+    juvenile_females{other.juvenile_females},
+    juvenile_males{other.juvenile_males}
 {}
 
 void Patch::operator=(Patch const &other)
 {
     females = other.females;
     males = other.males;
+    juvenile_females = other.juvenile_females;
+    juvenile_males = other.juvenile_males;
 }
 
